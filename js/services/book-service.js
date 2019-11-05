@@ -1,6 +1,6 @@
 'use strict'
 import {storageService} from './storage-service.js'
-import {makeId} from './util-service.js'
+
 
 export const bookService = {
     getBooks,
@@ -473,7 +473,6 @@ function getBooks() {
     storageService.store(STORAGE_KEY, books)
   } 
     gBooks = books
-    console.log(gBooks)
   return Promise.resolve(gBooks);
 }
 

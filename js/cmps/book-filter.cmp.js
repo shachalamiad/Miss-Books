@@ -20,7 +20,6 @@ export default {
     },
     
     created() {
-        console.log('Filter Created', this.filterBy);
         this.$emit('filtered', this.filterBy)
     }
 }

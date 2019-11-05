@@ -1,9 +1,10 @@
 'use strict'
-import {eventBus} from '../services/event-bus-service.js'
 import longText from '../cmps/long-text.cmp.js'
 import {bookService} from '../services/book-service.js'
 import userReviews from '../cmps/user-reviews.cmp.js'
 import userMsg from '../cmps/user-msg.cmp.js'
+import {eventBus} from '../services/event-bus-service.js'
+
 
 export default {
     
@@ -74,8 +75,6 @@ export default {
         bookService.findBook(bookId)
             .then(book =>{
                 this.book = book
-
-             })
+        })
     }
-
 }

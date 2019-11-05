@@ -5,6 +5,7 @@ import bookFilter from '../cmps/book-filter.cmp.js';
 import bookList from '../cmps/book-list.cmp.js';
 import appHeader from '../cmps/app-header.cmp.js';
 import userMsg from '../cmps/user-msg.cmp.js';
+import googleBooks from '../pages/google-books.cmp.js';
 
 import {bookService} from '../services/book-service.js';
 
@@ -19,6 +20,7 @@ export default {
         <book-list :books="booksToShow" @selected="selectBook"></book-list>
         <book-details v-if="isSelected" :book="selectedBook" @closeModal="closeModal"></book-details>      
         <user-msg></user-msg>
+        <google-books></google-books>
     </div>
     `,
 
@@ -45,7 +47,6 @@ export default {
             },
 
             closeModal() {
-                console.log('hiiiiiiiii')
                 this.isSelected = false;
             },
             
@@ -77,7 +78,8 @@ export default {
         bookFilter,
         bookList,
         appHeader,
-        userMsg
+        userMsg,
+        googleBooks
     },
     
     created() {

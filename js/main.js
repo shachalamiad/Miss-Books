@@ -10,10 +10,8 @@ var options = {
     el: '#my-app',
     template: `
     <div class="home-page">
-
             <app-header></app-header>
             <router-view></router-view>
-       
     </div>
     `,
 

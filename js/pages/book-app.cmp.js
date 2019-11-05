@@ -1,6 +1,6 @@
 'use strict'
 
-import bookDetails from '../cmps/book-details.cmp.js';
+import bookDetails from './book-details.cmp.js';
 import bookFilter from '../cmps/book-filter.cmp.js';
 import bookList from '../cmps/book-list.cmp.js';
 import appHeader from '../cmps/app-header.cmp.js';

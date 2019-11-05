@@ -30,28 +30,18 @@ export default {
         else {
             googleBookService.getBooks(search)
                 .then(books => {
-                    console.log(books);
                         this.books = books;     
                     })
                 }
             },
-            // addBook(book){
-            //     booksService.addNewBook(book);  
-            //     const msg = {
-            //         txt: `New book added!`,
-            //         type: 'add'
-            //         }
-            //         eventBus.$emit('show-msg',msg)           
-            //     } 
+        addBook(book){
+            bookService.addNewBook(book);  
+            const msg = {
+                txt: `New book added!`,
+                type: 'add'
+                }
+                eventBus.$emit('show-msg',msg)           
+                } 
             }
         }
-            
-
-        // <p>Id: {{book.id}} </p>
-        // <p>Title: {{book.title}} </p> 
-        // <p>Author: {{book.authors.join('')}} </p> 
-        // <p>Price: {{calcPrice}}</p>
-        // <p>Currency: {{book.listPrice.currencyCode}}</p>
-        // <p>On sale: {{book.listPrice.isOnSale}}</p> 
-
-        // v-model="filterBy.name"
+          

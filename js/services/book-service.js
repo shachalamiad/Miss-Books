@@ -6,7 +6,8 @@ export const bookService = {
     getBooks,
     findBook,
     addReview,
-    deleteReview
+    deleteReview,
+    addNewBook
 }
 
 const STORAGE_KEY = 'BooksApp'
@@ -487,6 +488,7 @@ return Promise.resolve(book);
 function addReview(review, id) {
   findBook(id)
     .then(book =>{
+      console.log(gBooks)
       book.review.unshift(review)
       storageService.store(STORAGE_KEY, gBooks)
       return Promise.resolve(book);
@@ -502,4 +504,19 @@ function deleteReview(reviewId, bookId) {
       book.review.splice(reviewIdx, 1)
       storageService.store(STORAGE_KEY, gBooks)
     })
+}
+
+function addNewBook(book){
+  var newBook = {
+    id: book.id,
+    title: book.volumeInfo.title,
+    authors: book.volumeInfo.authors,
+    publishedDate: book.volumeInfo.publishedDate,
+    description: book.volumeInfo.description,
+    pageCount: book.volumeInfo.pageCount,
+    thumbnail: book.volumeInfo.imageLinks.thumbnail,
+    listPrice: {amount: 100 ,currencyCode: book.saleInfo.country, isOnSale: false }
+  }
+  gBooks.unshift(newBook);
+  storageService.store(STORAGE_KEY,gBooks);  
 }

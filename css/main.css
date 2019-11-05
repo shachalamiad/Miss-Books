@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+.books-list-container {
+    background-color: darkmagenta;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.book {
+    background-color: darkgrey;
+    color: midnightblue;
+    border: 2px solid #333;
+    border-radius: 6px;
+    width: 15em;
+    margin: 1em;
+    padding: 1px;
+    
+}
+
+.book li {
+    margin: auto;
+
+}
+
+.img {
+    width: 10em;
+    height: 10em;
+}
+
+.long-text {
+    transition: 0.3s;
+}
+
+.book-details {
+    position: absolute;
+    left: 26%;
+    height: 450px;
+    background-color: lightblue;
+    width: 45%;
+    padding: 15px;
+    opacity: 0.9;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.expensive {
+    background-color: red;
+}
+
+.cheap {
+    background-color: green;
+}
+
+.book-filter {
+    background-color:lightslategrey;
+    margin: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: 0.5em;
+}
+
+.welcome-page {
+    background-color: darkmagenta;
+    height: 00px;
+}
+
+.home-page {
+    background-color: darkmagenta;
+    height: 100vh;
+    margin: auto;
+}
+
+.app-header-container {
+    color: white
+}
+
+.links-container {
+    color: white
+}
+
+.link {
+    color: white;
+}
+
+.user-msg {
+    background-color: yellow;
+}
